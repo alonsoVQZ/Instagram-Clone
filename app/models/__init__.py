@@ -4,7 +4,6 @@ from .departments import Department
 from .medias import Media
 from .orders_products import OrderProduct
 from .orders import Order
-from .products_medias import ProductMedia
 from .products import Product
 from .reviews import Review
 from .sellers import Seller
