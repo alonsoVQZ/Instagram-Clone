@@ -1,0 +1,51 @@
+#ReviewForm-f1 {
+    height: auto;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+#ReviewForm-f1s1 {
+    font-size: x-large;
+    font-weight: 700;
+}
+
+#ReviewForm-f1d5 {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+#ReviewForm-f1d5b1 {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin: 5px 0px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffd814;
+    text-decoration: none;
+    font-size: small;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+
+.ReviewForm-f1-div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ReviewForm-label {
+    margin-bottom: 10pxa;
+    font-size: large;
+    font-weight: 700;
+}
+
+.ReviewForm-f1-input {
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}

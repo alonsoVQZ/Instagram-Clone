@@ -1,0 +1,40 @@
+#ProductMediaSlide {
+    width: 350px;
+    height: 350px;
+    display: grid;
+    grid-template-rows: 275px 1fr;
+}
+
+#ProductMediaSlide-d1 {
+    width: 100%;
+    height: 275px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ProductMediaSlide-d1i1 {
+    max-width: 350px;
+    max-height: 275px;
+}
+
+#ProductMediaSlide-d2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProductMediaSlide-divlist {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.ProductMediaSlide-imglist {
+    max-width: 40px;
+    max-height: 40px;
+}

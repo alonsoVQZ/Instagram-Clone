@@ -1,29 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import "./index.css";
-import App from "./App";
-import configureStore from "./store";
 import { BrowserRouter } from "react-router-dom";
-import { ModalProvider } from "./context/Modal";
+import store from "./store";
 
-const store = configureStore();
+// Componets
+import App from "./App";
+
+// Style
+import "./index.css";
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 
 function Root() {
   return (
     <Provider store={store}>
-      <ModalProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </ModalProvider>
     </Provider>
-  );
+  )
 }
 
-ReactDOM.render(
+
+root.render(
   <React.StrictMode>
     <Root />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
+

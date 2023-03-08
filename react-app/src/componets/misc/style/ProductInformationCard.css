@@ -1,0 +1,73 @@
+.ProductInformationCard {
+    height: 550px;
+    width: 260px;
+    margin: 10px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px 4px;
+    box-sizing: border-box;
+}
+
+.ProductInformationCard-d1 {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ProductInformationCard-d1i1 {
+    width: 230px;
+    height: auto;
+}
+
+.ProductInformationCard-d2 {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.ProductInformationCard-d2s1 {
+    font-size: medium;
+}
+
+.ProductInformationCard-d2d1 {
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
+    font-size: small;
+    color: #00a4f8;
+}
+
+.ProductInformationCard-d2d2 {
+    display: flex;
+}
+
+.ProductInformationCard-d2d2s1 {
+    padding-top: 8px;
+}
+
+.ProductInformationCard-d2d2s2 {
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.ProductInformationCard-d2d2s3 {
+    padding-top: 8px;
+}
+
+.ProductInformationCard-d2d2s4 {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    text-decoration: line-through;
+    font-size: small;
+    color: gray;
+}
+
+
+.ProductInformationCard-d2-content {
+    margin: 5px 0px;
+}

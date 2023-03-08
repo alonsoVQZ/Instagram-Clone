@@ -1,0 +1,37 @@
+#SearchBar {
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#SearchBar-f1 {
+    width: auto;
+    height: 40px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+#SearchBar-f1s1 {
+    border: none;
+    background-color: #f3f3f3;
+}
+
+#SearchBar-f1in1 {
+    border: none;
+    box-sizing: border-box;
+}
+
+#SearchBar-f1b1 {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #febd69;
+}
+
+#SearchBar-f1b1i1 {
+    height: auto;
+    width: 20px;
+}

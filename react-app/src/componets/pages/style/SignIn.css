@@ -1,0 +1,44 @@
+#SignIn {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+}
+
+#SignIn-i1 {
+    height: auto;
+    width: 100px;
+    margin: 20px 0px;
+}
+
+#SignIn-d1 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+#SignIn-d1s1 {
+    color: gray;
+}
+
+#SignIn-d1b1 {
+    height: 30px;
+    width: 300px;
+    margin: 10px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+#SignIn-d2ul1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 0px;
+    list-style-type: none;
+    color: #00a4f8;
+}

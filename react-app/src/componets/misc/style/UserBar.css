@@ -1,0 +1,24 @@
+#UserBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 5px;
+}
+
+#Anonymus {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#Anonymus-d1 {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    color: black;
+}

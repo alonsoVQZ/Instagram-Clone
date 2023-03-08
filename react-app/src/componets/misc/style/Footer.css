@@ -1,0 +1,30 @@
+#Footer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#Footer-d1 {
+    padding: 15px 0px;
+    background-color: #37475a;
+}
+
+#Footer-d2 {
+    padding: 15px 0px;
+    background-color: #232f3e;
+}
+
+#Footer-d2i1 {
+    width: 80px;
+}
+
+#Footer-d3 {
+    padding: 15px 0px;
+    background-color: #131a22;
+}
+
+.Footer-Divs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

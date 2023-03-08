@@ -1,0 +1,44 @@
+#FourItemsCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 350px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#FourItemsCard-s1 {
+    width: 100%;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+#FourItemsCard-d1 {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 170px 170px;
+}
+
+.Product {
+    z-index: 2;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Product-image {
+    height: 120px;
+    width: auto;
+}
+
+.FourItemsCard-span {
+    height: 140px;
+    width: 140px;
+}

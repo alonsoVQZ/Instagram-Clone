@@ -1,0 +1,33 @@
+#Banner {
+    position: relative;
+    width: 1500px;
+    height: 600px;
+    /* background-color: pink; */
+}
+
+#Banner-d1 {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Banner-d1i1 {
+    width: 40px;
+    height: auto;
+}
+
+#Banner-d1i2 {
+    width: 40px;
+    height: auto;
+}
+
+#Banner-i1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}

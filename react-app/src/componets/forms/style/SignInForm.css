@@ -1,0 +1,56 @@
+#SignInForm {
+    width: 350px;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+#SignInForm-d1 {
+    margin: 10px 0px;
+}
+
+#SignInForm-d1s1 {
+    font-size: x-large;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+
+#SignInFormPassword-span {
+    color: #00a4f8;
+    font-weight: 700;
+
+}
+
+
+
+.SignInForm-forms {
+    display: flex;
+    flex-direction: column;
+}
+
+.SignInForm-labels {
+    font-weight: 700;
+}
+
+.SignInForm-inputs {
+    height: 30px;
+    border-radius: 5px;
+}
+
+.SignInForm-buttons {
+    height: 30px;
+    margin: 20px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background-color: #f5d78b;
+}
+
+.SignInForm-buttons-demouser {
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}

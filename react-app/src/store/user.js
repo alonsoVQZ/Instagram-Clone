@@ -1,116 +1,101 @@
 const initialState = null;
-const CURRENT_SESSION = "session/current";
-const LOGIN_SESSION = "session/login";
-const SIGNSUP_SESSION = "session/signup";
-const LOGOUT_SESSION = "session/logout";
 
-// Actions
-const sessionAction = (user) => {
-  return {
-    type: CURRENT_SESSION,
-    user,
-  };
-};
 
-const logInAction = (user) => {
-  return {
-    type: LOGIN_SESSION,
-    user,
-  };
-};
+const USER_SESSION = 'user/session';
+const USER_SIGN_IN = 'user/signIn';
+const USER_SIGN_UP = 'user/signUp';
+const USER_SIGN_OUT = 'user/signOut';
 
-const signUpAction = (user) => {
-  return {
-    type: SIGNSUP_SESSION,
-    user,
-  };
-};
 
-const logOutAction = () => {
-  return {
-    type: LOGOUT_SESSION,
-  };
-};
-
-// Functions
-export const sessionFunction = () => async (dispatch) => {
-  const response = await fetch("/api/users/session");
-  const responseJSON = await response.json();
-  if (responseJSON.errors) return "errors";
-  dispatch(sessionAction(responseJSON));
-  return responseJSON;
-};
-
-export const logInFunction = (data) => async (dispatch) => {
-  const response = await fetch("/api/users/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/JSON" },
-    body: JSON.stringify(data),
-  });
-  const responseJSON = await response.json();
-  if(responseJSON.errors) return responseJSON;
-  dispatch(logInAction(responseJSON));
-  return responseJSON;
-};
-
-export const logInDemouserFunction = () => async (dispatch) => {
-  const response = await fetch("/api/users/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/JSON" },
-    body: JSON.stringify({
-      "credential": "demouser",
-      "password": "password1234"
-    })
-  });
-  const responseJSON = await response.json();
-  dispatch(logInAction(responseJSON));
-  return responseJSON;
-};
-
-export const signUpFunction = (data) => async (dispatch) => {
-  const response = await fetch("/api/users/signup", {
-    method: "POST",
-    headers: { "Content-Type": "application/JSON" },
-    body: JSON.stringify(data),
-  });
-  const responseJSON = await response.json();
-  if(responseJSON.errors) return responseJSON;
-  dispatch(signUpAction(responseJSON));
-  return responseJSON;
-};
-
-export const logOutFunction = () => async (dispatch) => {
-  const response = await fetch("/api/users/logout");
-  const responseJSON = await response.json();
-  dispatch(logOutAction());
-  return responseJSON;
-};
-
-// Reducer
-function sessionReducer(state = initialState, action) {
-  let newState;
-  switch (action.type) {
-    case CURRENT_SESSION:
-      newState = {
-        ...action.user,
-      };
-      return newState;
-    case LOGIN_SESSION:
-      newState = {
-        ...action.user,
-      };
-      return newState;
-    case SIGNSUP_SESSION:
-      newState = {
-        ...action.user,
-      };
-      return newState;
-    case LOGOUT_SESSION:
-      newState = initialState;
-      return newState;
-    default:
-      return state;
-  }
+const userSessionAction = (user) => {
+    return {
+        type: USER_SESSION,
+        user
+    }
 }
 
-export default sessionReducer;
+
+const userSignInAction = (user) => {
+    return {
+        type: USER_SIGN_IN,
+        user
+    }
+}
+
+
+const userSignUpAction = (user) => {
+    return {
+        type: USER_SIGN_UP,
+        user
+    }
+}
+
+
+const userSignOutAction = () => {
+    return {
+        type: USER_SIGN_OUT,
+    }
+}
+
+
+
+export const userSessionFunction = () => async (dispatch) => {
+    const response = await fetch("/api/user/session");
+    const responseJSON = await response.json();
+    dispatch(userSessionAction(responseJSON));
+    return responseJSON;
+};
+  
+
+export const userSignInFunction = (data) => async (dispatch) => {
+    const response = await fetch("/api/user/signin", {
+        method: "POST",
+        headers: { "Content-Type": "application/JSON" },
+        body: JSON.stringify(data),
+    });
+    const responseJSON = await response.json();
+    dispatch(userSignInAction(responseJSON));
+    return responseJSON;
+};
+
+export const userSignUpFunction = (data) => async (dispatch) => {
+    const response = await fetch("/api/user/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/JSON" },
+        body: JSON.stringify(data),
+    });
+    const responseJSON = await response.json();
+    if(responseJSON.error) return responseJSON;
+    dispatch(userSignUpAction(responseJSON));
+    return responseJSON;
+};
+
+export const userSignOutFunction = () => async (dispatch) => {
+    const response = await fetch("/api/user/signout");
+    const responseJSON = await response.json();
+    dispatch(userSignOutAction());
+    return responseJSON;
+};
+  
+
+function userReducer(state = initialState, action) {
+    let newState;
+    switch (action.type) {
+        case USER_SESSION:
+            newState = { ...action.user };
+            return newState;
+        case USER_SIGN_IN:
+            newState = { ...action.user };
+            return newState;
+        case USER_SIGN_UP:
+            newState = { ...action.user };
+            return newState;
+        case USER_SIGN_OUT:
+            newState = initialState;
+            return newState;
+        default:
+            return state;
+    }
+}
+  
+export default userReducer;

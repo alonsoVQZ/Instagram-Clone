@@ -1,0 +1,12 @@
+#CartBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+}
+
+#CartBar-i1 {
+    height: auto;
+    width: 15px;
+}
