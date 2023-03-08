@@ -5,7 +5,7 @@ from sqlalchemy.sql import func
 
 
 class Seller(db.Model, UserMixin):
-    __tablename__ = 'Sellers'
+    __tablename__ = 'sellers'
 
 
     if environment == "production":

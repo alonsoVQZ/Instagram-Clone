@@ -3,14 +3,14 @@ from sqlalchemy.sql import func
 
 
 class Order(db.Model):
-    __tablename__ = 'Orders'
+    __tablename__ = 'orders'
 
     if environment == "production":
         __table_args__ = {'schema': SCHEMA}
     
     id = db.Column(db.Integer, primary_key=True)
     
-    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('Users.id')), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
 
     delivered = db.Column(db.Boolean, nullable=False)
     subtotal = db.Column(db.Float, nullable=False)

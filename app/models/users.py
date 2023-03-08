@@ -5,7 +5,7 @@ from sqlalchemy.sql import func
 
 
 class User(db.Model, UserMixin):
-    __tablename__ = 'Users'
+    __tablename__ = 'users'
 
 
     if environment == "production":

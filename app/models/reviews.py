@@ -3,7 +3,7 @@ from sqlalchemy.sql import func
 
 
 class Review(db.Model):
-    __tablename__ = 'Reviews'
+    __tablename__ = 'reviews'
 
 
     if environment == "production":
@@ -11,8 +11,8 @@ class Review(db.Model):
 
     
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('Users.id')), nullable=False)
-    product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('Products.id')), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('products.id')), nullable=False)
 
     rating = db.Column(db.Integer, nullable=False)
     headline = db.Column(db.String, nullable=False)

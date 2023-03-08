@@ -3,15 +3,15 @@ from sqlalchemy.sql import func
 
 
 class OrderProduct(db.Model):
-    __tablename__ = 'Orders_Products'
+    __tablename__ = 'orders_products'
 
     if environment == "production":
         __table_args__ = {'schema': SCHEMA}
     
     id = db.Column(db.Integer, primary_key=True)
 
-    order_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('Orders.id')), nullable=False)
-    product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('Products.id')), nullable=False)
+    order_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('orders.id')), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('products.id')), nullable=False)
 
     quantity = db.Column(db.String(50), nullable=False)
 
