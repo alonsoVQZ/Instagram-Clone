@@ -26,7 +26,8 @@ app.cli.add_command(seed_commands)
 
 app.config.from_object(Config)
 app.register_blueprint(api, url_prefix='/api')
-db.init_app(app)
+with app.app_context():
+    db.create_all()
 Migrate(app, db)
 
 
