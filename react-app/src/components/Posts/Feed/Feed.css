@@ -1,0 +1,16 @@
+.feed-section {
+    display: flex;
+    justify-content: center;
+    max-width: 470px;
+}
+
+.post-feed-container {
+    max-width: 470px;
+}
+
+.post-feed-no-following {
+    font-family: 'Open Sans', sans-serif;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 25px;
+}
