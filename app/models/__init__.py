@@ -1,9 +1,11 @@
-from .db import db
-from .user import User
-from .db import environment, SCHEMA
-from .follower import Follower
-from .media import Media
-from .like import Like
-from .comment import Comment
-from .reply import Reply
-from .post import Post
+from .db import db, environment, SCHEMA
+
+from .departments import Department
+from .medias import Media
+from .orders_products import OrderProduct
+from .orders import Order
+from .products_medias import ProductMedia
+from .products import Product
+from .reviews import Review
+from .sellers import Seller
+from .users import User
