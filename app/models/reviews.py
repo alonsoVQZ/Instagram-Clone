@@ -11,8 +11,8 @@ class Review(db.Model):
 
     
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('Users.id'), nullable=False)
-    product_id = db.Column(db.Integer, db.ForeignKey('Products.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('Users.id')), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('Products.id')), nullable=False)
 
     rating = db.Column(db.Integer, nullable=False)
     headline = db.Column(db.String, nullable=False)

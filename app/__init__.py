@@ -4,7 +4,7 @@ from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect, generate_csrf
 from flask_login import LoginManager
-from .models import db
+from .models import db, Department, Media, OrderProduct, Order, Product, Review, User
 from .routes import api
 from .seeds import seed_commands
 from .config import Config
@@ -28,7 +28,6 @@ app.config.from_object(Config)
 app.register_blueprint(api, url_prefix='/api')
 db.init_app(app)
 Migrate(app, db)
-from .models import Department, Media, OrderProduct, Order, Product, Review, User
 
 
 # Application Security

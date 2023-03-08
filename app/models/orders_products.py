@@ -10,8 +10,8 @@ class OrderProduct(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
 
-    order_id = db.Column(db.Integer, db.ForeignKey('Orders.id'), nullable=False)
-    product_id = db.Column(db.Integer, db.ForeignKey('Products.id'), nullable=False)
+    order_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('Orders.id')), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('Products.id')), nullable=False)
 
     quantity = db.Column(db.String(50), nullable=False)
 

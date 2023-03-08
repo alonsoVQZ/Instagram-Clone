@@ -10,7 +10,7 @@ class Order(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
     
-    user_id = db.Column(db.Integer, db.ForeignKey('Users.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('Users.id')), nullable=False)
 
     delivered = db.Column(db.Boolean, nullable=False)
     subtotal = db.Column(db.Float, nullable=False)
