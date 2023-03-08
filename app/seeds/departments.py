@@ -23,8 +23,8 @@ def seed_departments():
 
 def undo_departments():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.Departments RESTART IDENTITY CASCADE;")
+        db.session.execute(f"TRUNCATE table {SCHEMA}.departments RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute("DELETE FROM Departments")
+        db.session.execute("DELETE FROM departments")
 
     db.session.commit()

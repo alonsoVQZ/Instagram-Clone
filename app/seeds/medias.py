@@ -205,8 +205,8 @@ def seed_medias():
 
 def undo_medias():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.Medias RESTART IDENTITY CASCADE;")
+        db.session.execute(f"TRUNCATE table {SCHEMA}.medias RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute("DELETE FROM Medias")
+        db.session.execute("DELETE FROM medias")
 
     db.session.commit()

@@ -22,8 +22,8 @@ def seed_sellers():
 
 def undo_sellers():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.Sellers RESTART IDENTITY CASCADE;")
+        db.session.execute(f"TRUNCATE table {SCHEMA}.sellers RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute("DELETE FROM Sellers")
+        db.session.execute("DELETE FROM sellers")
 
     db.session.commit()
