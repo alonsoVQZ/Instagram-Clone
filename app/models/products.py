@@ -14,10 +14,10 @@ class Product(db.Model):
     seller_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('sellers.id')), nullable=False)
     department_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('departments.id')), nullable=False)
 
-    name = db.Column(db.String(50), nullable=False)
+    name = db.Column(db.String, nullable=False)
     price = db.Column(db.Float, nullable=False)
     discount = db.Column(db.Integer, nullable=True)
-    description = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.String, nullable=False)
     stock = db.Column(db.Integer, nullable=False)
 
     reviews = db.relationship("Review", back_populates="product", cascade="all, delete-orphan")

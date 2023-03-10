@@ -13,7 +13,7 @@ class OrderProduct(db.Model):
     order_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('orders.id')), nullable=False)
     product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('products.id')), nullable=False)
 
-    quantity = db.Column(db.String(50), nullable=False)
+    quantity = db.Column(db.String, nullable=False)
 
     order = db.relationship("Order", back_populates="orders_products")
     product = db.relationship("Product", back_populates="orders_products")
