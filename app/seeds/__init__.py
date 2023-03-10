@@ -28,12 +28,12 @@ def seed():
         undo_sellers()
         undo_users()
 
-    seed_departments()
-    seed_medias()
-    seed_products()
-    seed_sellers()
     seed_users()
-
+    seed_departments()
+    seed_sellers()
+    seed_products()
+    seed_medias()
+    
 # Creates the `flask seed undo` command
 @seed_commands.command('undo')
 def undo():
