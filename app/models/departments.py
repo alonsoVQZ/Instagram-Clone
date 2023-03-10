@@ -3,7 +3,7 @@ from sqlalchemy.sql import func
 
 
 class Department(db.Model):
-    __tablename__ = 'deparments'
+    __tablename__ = 'departments'
 
     if environment == "production":
         __table_args__ = {'schema': SCHEMA}

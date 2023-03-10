@@ -12,7 +12,7 @@ class Product(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     seller_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('sellers.id')), nullable=False)
-    department_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('deparments.id')), nullable=False)
+    department_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('departments.id')), nullable=False)
 
     name = db.Column(db.String(50), nullable=False)
     price = db.Column(db.Float, nullable=False)
