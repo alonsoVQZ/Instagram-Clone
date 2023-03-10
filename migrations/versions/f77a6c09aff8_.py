@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 73bfca2b5fb6
+Revision ID: f77a6c09aff8
 Revises: 
-Create Date: 2023-03-08 14:45:17.882242
+Create Date: 2023-03-09 20:47:22.787182
 
 """
 from alembic import op
@@ -13,7 +13,7 @@ environment = os.getenv("FLASK_ENV")
 SCHEMA = os.environ.get("SCHEMA")
 
 # revision identifiers, used by Alembic.
-revision = '73bfca2b5fb6'
+revision = 'f77a6c09aff8'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -105,6 +105,7 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     # ### end Alembic commands ###
+    
     if environment == "production":
         op.execute(f"ALTER TABLE reviews SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE orders_products SET SCHEMA {SCHEMA};")
