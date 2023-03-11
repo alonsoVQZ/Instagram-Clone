@@ -8,11 +8,12 @@ orders = Blueprint('orders', __name__)
 orders.register_blueprint(orders_products, url_prefix='/products')
 
 @orders.route('', methods=['GET', 'POST'])
+@login_required
 def orders_post():
     if request.method == 'GET':
-        response = Order.query.filter_by(user_id=1).all()
+        response = Order.query.filter_by(user_id=current_user.get_id()).all()
         listOrders = [order.data_orders_products() for order in response]
-        return listOrders
+        return jsonify(listOrders)
     if request.method == 'POST':
         data = request.json
         newOrder = Order(**{
@@ -33,6 +34,7 @@ def orders_post():
         return newOrder.data()
 
 @orders.route('/<int:id>', methods=['DELETE'])
+@login_required
 def orders_id(id):
     if request.method == 'DELETE':
         order = Order.query.get(id)

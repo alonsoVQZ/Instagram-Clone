@@ -10,7 +10,7 @@ def products_search():
     response = Product.query.filter(Product.name.contains(data["data"])).all()
     if response:
         products = [product.data() for product in response]
-        return products
+        return jsonify(products)
     return { "error": "Products not found" }
 
 

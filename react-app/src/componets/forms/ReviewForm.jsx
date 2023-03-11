@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import "./style/ReviewForm.css"
 
@@ -8,7 +8,17 @@ function ReviewForm() {
     const [rating, setRating] = useState(0);
     const [headline, setHeadline] = useState("");
     const [comment, setComment] = useState("");
+    const [headlineError, setHeadlineError] = useState(false);
+    const [commentError, setCommentError] = useState(false);
     const handleSubmit = async () => {
+        if(!headline.length) {
+            setHeadlineError(true)
+            return
+        }
+        if(!comment.length) {
+            setCommentError(true)
+            return
+        }
         const formValues = {
             rating,
             headline,
@@ -31,6 +41,8 @@ function ReviewForm() {
         navigate(`/products/${productId}`)
     }
 
+    
+
 
     useState(async () => {
         if(reviewId) {
@@ -43,6 +55,11 @@ function ReviewForm() {
             }
         }
     }, [])
+    
+    useEffect(() => {
+        if(headline.length > 0) setHeadlineError(false)
+        if(comment.length > 0) setCommentError(false)
+    }, [headline, comment])
     return (
         <div id="ReviewForm">
             <form  id="ReviewForm-f1">
@@ -63,10 +80,12 @@ function ReviewForm() {
                 <div className="ReviewForm-f1-div">
                     <label className="ReviewForm-label" htmlFor="">Add a headline</label>
                     <input className="ReviewForm-f1-input" type="text" placeholder="What's most important to know?" value={headline} onChange={(e) => setHeadline(e.target.value)}/>
+                    { headlineError && <span>Headline can't be empty</span> }
                 </div>
                 <div className="ReviewForm-f1-div">
                     <label className="ReviewForm-label" htmlFor="">Add a written review</label>
                     <textarea cols="30" rows="10"  placeholder="What did you like or dislike? What did you use this product for?" value={comment} onChange={(e) => setComment(e.target.value)} />
+                    { commentError && <span>Review can't be empty</span> }
                 </div>
                 <div id="ReviewForm-f1d5">
                     <button id="ReviewForm-f1d5b1" type="button" onClick={() => handleSubmit()}>Submit</button>

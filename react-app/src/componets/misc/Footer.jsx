@@ -10,7 +10,7 @@ function Footer() {
                 <img id="Footer-d2i1"alt="image" src="/amazon-logo-white.png" />
             </div>
             <div id="Footer-d3" className='Footer-Divs'>
-                <span>© 1996-2023, Amazon.com, Inc. or its affiliates</span>
+                <span>© 1996-2023, Aovzon.com, Inc. or its affiliates</span>
             </div>
         </div>
     )

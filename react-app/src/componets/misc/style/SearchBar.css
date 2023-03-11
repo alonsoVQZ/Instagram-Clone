@@ -16,6 +16,18 @@
     border: none;
     background-color: #f3f3f3;
 }
+#SearchBar-temp-d1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+#SearchBar-temp-d1s1 {
+    margin: 0px 10px;
+    color: black;
+    font-weight: 700;
+}
 
 #SearchBar-f1in1 {
     border: none;

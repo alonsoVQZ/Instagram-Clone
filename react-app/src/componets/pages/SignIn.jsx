@@ -11,11 +11,11 @@ function SignIn() {
     const handleSignUp = () => navigate("/signup")
     return (
         <div id="SignIn">
-            <img id="SignIn-i1" src="/amazon-logo-black.png" />
+            <NavLink to={"/"}><img id="SignIn-i1" src="/amazon-logo-black.png" /></NavLink>
             <SignInForm />
             <div id="SignIn-d1">
-                <span id="SignIn-d1s1">New to amazon?</span>
-                <button id="SignIn-d1b1" onClick={() => handleSignUp()} type="button">Create your Amazon account</button>
+                <span id="SignIn-d1s1">New to aovzon?</span>
+                <button id="SignIn-d1b1" onClick={() => handleSignUp()} type="button">Create your Aovzon account</button>
             </div>
             <div id='SignIn-d2'>
                 <ul id='SignIn-d2ul1'>
@@ -23,7 +23,7 @@ function SignIn() {
                     <li>Privacy Notice</li>
                     <li>Help</li>
                 </ul>
-                <span>© 1996-2022, Amazon.com, Inc. or its affiliates</span>
+                <span>© 1996-2022, Aovzon.com, Inc. or its affiliates</span>
             </div>
         </div>
     )

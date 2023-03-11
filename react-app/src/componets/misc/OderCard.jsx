@@ -62,8 +62,9 @@ function OrderCard({ element, setReload }) {
                                 </div>
                                 <div className="OrderCard-d2d1d2">
                                     <div className="OrderCard-d2d1d2d1">
-                                        <span className="OrderCard-d2d1d2d1s1">Quantity</span>
-                                        <select className="OrderCard-d2d1d2d1sel1" name="" id="" value={innerElement.quantity}>
+                                        <span className="OrderCard-d2d1d2d1s1">{`Quantity: ${innerElement.quantity}`}</span>
+
+                                        {/* <select className="OrderCard-d2d1d2d1sel1" name="" id="" value={innerElement.quantity}>
                                             {
                                                 numbers.map(number => {
                                                     return (
@@ -72,7 +73,7 @@ function OrderCard({ element, setReload }) {
                                                 })
                                             }
                                         </select>
-                                        <button className="OrderCard-d2d1d2d1b1">Submit</button>
+                                        <button className="OrderCard-d2d1d2d1b1">Submit</button> */}
                                     </div>
                                     
                                     <button className="OrderCard-d2d1d2b1" onClick={() => handleCancelItems(innerElement.id)} type="button">Cancel Items</button>

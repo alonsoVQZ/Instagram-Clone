@@ -60,7 +60,7 @@ function SignUpForm() {
                 <button className="SignUpForm-buttons" onClick={() => handleSignUp()} type="button">Sign Up</button>
             </form>
             <div id="SignUpForm-d2">
-                <span>By creating an account, you agree to Amazon's Conditions of Use and Privacy Notice.</span>
+                <span>By creating an account, you agree to Aovzon's Conditions of Use and Privacy Notice.</span>
             </div>
             <div id="SignUpForm-d3">
                     <span>Already have an account? <NavLink to={'/signin'}>Sign in</NavLink></span>
@@ -117,7 +117,7 @@ function SignInPersonalAccountEmail({ setForm }) {
                 }
                 <button type="button" onClick={(e) => handleContinue(e)}>Continue</button>
             </form>
-            <span>By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.</span>
+            <span>By continuing, you agree to Aovzon's Conditions of Use and Privacy Notice.</span>
         </div>
     )
 }
