@@ -28,7 +28,7 @@ function productsReducer(state = initialState, action) {
     let newState;
     switch (action.type) {
         case PRODUCTS_SEARCH:
-            newState = { ...action.products };
+            newState = action.products;
             return newState;
         default:
             return state;
