@@ -32,7 +32,7 @@ function ProductInformation({ product }) {
                 {/* <NavLink id='ProductInformation-d1NL1'>Visit the { store } Store</NavLink> */}
                 <div id='ProductInformation-d1d1'>
                     <RatingStars { ...{ rating: product.reviews_avg, width: 15} }/>
-                    <span id='ProductInformation-d1d1s2'>{product.reviews_sum} ratings</span>
+                    <span id='ProductInformation-d1d1s2'>{product.reviews_len} ratings</span>
                 </div>
             </div>
             <div id='ProductInformation-d2'>

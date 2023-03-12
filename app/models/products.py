@@ -47,7 +47,7 @@ class Product(db.Model):
             "medias": medias_serialized,
             "reviews": reviews_serialized,
             "reviews_avg": reviews_avg,
-            "reviews_sum": reviews_sum,
+            "reviews_len": reviews_len,
         }
     
     def data_medias(self):

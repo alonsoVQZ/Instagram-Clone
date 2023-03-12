@@ -7,8 +7,8 @@ import './style/SignUp.css'
 function SignUp() {
     return (
         <div id="SignUp">
-            <NavLink to={"/"}><img id="SignUp-i1" src="/amazon-logo-black.png" /></NavLink>
-            
+            {/* <NavLink to={"/"}><img id="SignUp-i1" src="/amazon-logo-black.png" /></NavLink> */}
+            <NavLink id='SignUp-nl1' to={"/"}><span id='SignUp-nl1s1'>aovz</span><span id='SignUp-nl1s2'>on</span></NavLink>
             <SignUpForm />
             <div id='SignUp-d1'>
                 <ul id='SignUp-d1ul1'>

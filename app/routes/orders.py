@@ -1,11 +1,10 @@
 from flask import Blueprint, request, jsonify
 from flask_login import login_required, current_user
 from app.models import db, Order, OrderProduct
-from .products import orders_products
+# from .orders_products import orders_products
 
 orders = Blueprint('orders', __name__)
 
-orders.register_blueprint(orders_products, url_prefix='/products')
 
 @orders.route('', methods=['GET', 'POST'])
 @login_required
@@ -17,7 +16,7 @@ def orders_post():
     if request.method == 'POST':
         data = request.json
         newOrder = Order(**{
-            "user_id": 1,
+            "user_id": current_user.get_id(),
             "delivered": False,
             "subtotal": data["subtotal"],
         })
@@ -41,4 +40,6 @@ def orders_id(id):
         db.session.delete(order)
         db.session.commit()
         return { "message": "Order deleted" }
+
+
 

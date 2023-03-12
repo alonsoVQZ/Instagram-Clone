@@ -11,7 +11,7 @@ function SignIn() {
     const handleSignUp = () => navigate("/signup")
     return (
         <div id="SignIn">
-            <NavLink to={"/"}><img id="SignIn-i1" src="/amazon-logo-black.png" /></NavLink>
+            <NavLink id='SignIn-nl1' to={"/"}><span id='SignIn-nl1s1'>aovz</span><span id='SignIn-nl1s2'>on</span></NavLink>
             <SignInForm />
             <div id="SignIn-d1">
                 <span id="SignIn-d1s1">New to aovzon?</span>

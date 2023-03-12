@@ -11,6 +11,23 @@
     background-color: #131921;
 }
 
+#Header-d1d1nl1 { 
+    border-bottom: 3px solid #f79b34;
+    text-decoration: none;
+}
+
+#Header-d1d1nl1s1 {
+    color: white;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+#Header-d1d1nl1s2 {
+    color: #f79b34;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
 #Header-d1d1 {
     display: flex;
     justify-content: center;

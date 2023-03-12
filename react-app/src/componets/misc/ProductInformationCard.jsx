@@ -35,7 +35,7 @@ function ProductInformationCard({ product }) {
                 <span className="ProductInformationCard-d2s1 ProductInformationCard-d2-content">{ product.name }</span>
                 <div className="ProductInformationCard-d2d1">
                     <RatingStars { ...{ rating: product.reviews_avg, width: 15} }/>
-                    <span>{product.reviews_sum}</span>
+                    <span>{product.reviews_len}</span>
                 </div>
                 <div className="ProductInformationCard-d2d2 ProductInformationCard-d2-content">
                     <span className='ProductInformationCard-d2d2s1'>$</span>
