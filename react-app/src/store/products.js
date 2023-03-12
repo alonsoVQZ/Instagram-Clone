@@ -2,12 +2,19 @@ const initialState = null;
 
 
 const PRODUCTS_SEARCH = "products/search"
+const PRODUCTS_CLEAR = "products/clear"
 
 
 const productsSearchAction = (products) => {
     return {
         type: PRODUCTS_SEARCH,
         products
+    }
+}
+
+const productsClearAction = () => {
+    return {
+        type: PRODUCTS_CLEAR
     }
 }
 
@@ -18,7 +25,11 @@ export const productsSearchFunction = (data) => async (dispatch) => {
         body: JSON.stringify(data),
     });
     const responseJSON = await response.json();
-    if(responseJSON.error) return responseJSON
+    console.log(responseJSON)
+    if(responseJSON.error) {
+        dispatch(productsClearAction());
+        return responseJSON
+    }
     dispatch(productsSearchAction(responseJSON));
     return responseJSON;
 };
@@ -27,6 +38,9 @@ export const productsSearchFunction = (data) => async (dispatch) => {
 function productsReducer(state = initialState, action) {
     let newState;
     switch (action.type) {
+        case PRODUCTS_CLEAR:
+            newState = null;
+            return newState;
         case PRODUCTS_SEARCH:
             newState = action.products;
             return newState;

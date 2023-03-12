@@ -78,7 +78,7 @@ function Cart() {
                         )
                     }
                     {
-                        (!cart.length) && <span id="Cart-d1d1d1s1">Your Aovzon Cart is empty</span>
+                        (!cart.length) && <span id="Cart-d1d1d1s1">Your aovzon Cart is empty</span>
                     }
                 </div>
             </div>

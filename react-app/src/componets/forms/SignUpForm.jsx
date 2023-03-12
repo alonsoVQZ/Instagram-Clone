@@ -32,7 +32,7 @@ function SignUpForm() {
             setEmailError(true)
             return
         }
-        if(password.length <= 6){
+        if(password.length < 6){
             setPasswordError(true)
             return
         }
@@ -46,7 +46,7 @@ function SignUpForm() {
         if(firstName.length > 0) setFirstNameError(false)
         if(lastName.length > 0) setLastNameError(false)
         if(email.length > 0) setEmailError(false)
-        if(password.length > 6) setPasswordError(false)
+        if(password.length > 5) setPasswordError(false)
     }, [firstName, lastName, email, password])
 
     return (
@@ -86,7 +86,7 @@ function SignUpForm() {
                 <button className="SignUpForm-buttons" onClick={() => handleSignUp()} type="button">Sign Up</button>
             </form>
             <div id="SignUpForm-d2">
-                <span>By creating an account, you agree to Aovzon's Conditions of Use and Privacy Notice.</span>
+                <span>By creating an account, you agree to aovzon's Conditions of Use and Privacy Notice.</span>
             </div>
             <div id="SignUpForm-d3">
                     <span>Already have an account? <NavLink to={'/signin'}>Sign in</NavLink></span>
@@ -143,7 +143,7 @@ function SignUpForm() {
 //                 }
 //                 <button type="button" onClick={(e) => handleContinue(e)}>Continue</button>
 //             </form>
-//             <span>By continuing, you agree to Aovzon's Conditions of Use and Privacy Notice.</span>
+//             <span>By continuing, you agree to aovzon's Conditions of Use and Privacy Notice.</span>
 //         </div>
 //     )
 // }

@@ -11,7 +11,7 @@ function Footer() {
                 <NavLink id='Footer-d2nl1' to={"/"}><span id='Footer-d2nl1s1'>aovz</span><span id='Footer-d2nl1s2'>on</span></NavLink>
             </div>
             <div id="Footer-d3" className='Footer-Divs'>
-                <span>© 1996-2023, Aovzon.com, Inc. or its affiliates</span>
+                <span>© 1996-2023, aovzon.com, Inc. or its affiliates</span>
             </div>
         </div>
     )

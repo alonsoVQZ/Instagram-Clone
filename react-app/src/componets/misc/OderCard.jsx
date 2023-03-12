@@ -95,8 +95,8 @@ function ProductQuantity({ innerElement, setReload }) {
     return (
         <div className="OrderCard-d2d1d2d1">
             <span className="OrderCard-d2d1d2d1s1">Quantity</span>
-            <select className="OrderCard-d2d1d2d1sel1" onChange={(e) => setSelectQuantity(e.target.value)} >
-                <option defaultValue disabled>{quantity}</option>
+            <select className="OrderCard-d2d1d2d1sel1" onChange={(e) => setSelectQuantity(e.target.value)}>
+                <option selected value={quantity} disabled>{quantity}</option>
                 {
                     numbers.map(number => {
                         return (

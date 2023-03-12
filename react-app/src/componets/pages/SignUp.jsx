@@ -16,7 +16,7 @@ function SignUp() {
                     <li>Privacy Notice</li>
                     <li>Help</li>
                 </ul>
-                <span>© 1996-2022, Aovzon.com, Inc. or its affiliates</span>
+                <span>© 1996-2022, aovzon.com, Inc. or its affiliates</span>
             </div>
         </div>
     )

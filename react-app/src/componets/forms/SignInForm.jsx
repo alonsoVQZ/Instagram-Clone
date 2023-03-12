@@ -80,7 +80,7 @@ function SignInFormEmail({ setForm }) {
                 <button className="SignInForm-buttons" type="button" onClick={(e) => handleContinue(e)}>Continue</button>
                 <button className="SignInForm-buttons-demouser" type="button" onClick={(e) => handleDemoUser(e)}>Sign In as a Demo User</button>
             </form>
-            <span>By continuing, you agree to Aovzon's Conditions of Use and Privacy Notice.</span>
+            <span>By continuing, you agree to aovzon's Conditions of Use and Privacy Notice.</span>
         </div>
     )
 }
