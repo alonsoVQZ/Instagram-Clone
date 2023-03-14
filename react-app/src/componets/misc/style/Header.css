@@ -54,6 +54,19 @@
 #Header-n1 {
     background-color: #232f3e;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Header-n1nl1 {
+    text-decoration: none;
+}
+
+#Header-n1nl1s1 {
+    color: white;
+    font-size: large;
+    font-weight: 700;
 }
 
 #Header-n1ul1 {

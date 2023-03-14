@@ -30,6 +30,7 @@ function Header() {
                 </div>
             </div>
             <nav id='Header-n1'>
+                <NavLink id='Header-n1nl1' to={"/about"}><span id='Header-n1nl1s1'>about.me</span></NavLink>
                 {/* <ul id='Header-n1ul1'>
                     <li className="Header-list">All</li>
                     <li className="Header-list">Customer Service</li>

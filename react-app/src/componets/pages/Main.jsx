@@ -9,6 +9,7 @@ import ProductById from './ProductById';
 import Cart from "./Cart";
 import Orders from "./Orders";
 import ReviewFormPage from "./ReviewFormPage";
+import About from "./About"
 
 import "./style/Main.css"
 
@@ -20,6 +21,7 @@ function Main() {
             <Header />
             <Routes>
                 <Route path="/"element={ <Root /> }/>
+                <Route path="about"element={ <About /> }/>
                 <Route path="cart" element={ <Cart /> } />
                 <Route path="orders" element={ <Orders /> } />
                 <Route path="products" element={ <ProductsList /> } />
