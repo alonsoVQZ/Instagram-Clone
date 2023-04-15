@@ -8,8 +8,6 @@ reviews = Blueprint('reviews', __name__)
 def reviews_route():
     if request.method == 'POST':
         data = request.json
-        print("************************************************")
-        print(current_user.get_id())
         newReview = Review(**{
             "user_id": current_user.get_id(),
             "product_id": data["productId"],

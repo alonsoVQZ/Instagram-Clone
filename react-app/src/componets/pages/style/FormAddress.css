@@ -1,0 +1,89 @@
+#FormAddress {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#FormAddress-d1 {
+    height: auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+#FormAddress-d1d1 {
+    padding: 5px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+#FormAddress-d1d1s1 {
+    font-size: large;
+    font-weight: 700;
+}
+
+#FormAddress-d1d2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#FormAddress-d1d3 {
+    padding: 10px 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#FormAddress-d1d3b1 {
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    font-size: small;
+    background-color: #ffd814;
+}
+
+#FormAddress-d1d3b1:hover {
+    background-color: #e4bf0ad7;
+    cursor: pointer;
+}
+
+.FormAddress-d1d2-divtype1 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.FormAddress-d1d2-label {
+    font-size: small;
+    font-weight: 700;
+}
+
+.FormAddress-d1d2-input {
+    height: 30px;
+    width: 100%;
+    margin: 2px 0px;
+    box-sizing: border-box;
+}
+
+.FormAddress-d1d2-select {
+    height: 30px;
+    width: 100%;
+    margin: 2px 0px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: lightgrey;
+    box-shadow: 0px 3px 5px black;
+}
+
+.FormAddress-d1d2-input:focus {
+    box-shadow: 0px 0px 2px 3px lightblue;
+}
+
+.FormAddress-d1d2-divtype2 {
+    width: 500px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 5px;
+}

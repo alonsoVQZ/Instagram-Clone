@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import './style/ProductMediaSlide.css'
 
-function ProductMediaSlide({ product }) {
+export default function ProductMediaSlide({ product }) {
     const medias = product.medias
     const [currentImage, setCurrentImage] = useState(medias[0])
     useEffect(() => {
@@ -29,5 +29,3 @@ function ProductMediaSlide({ product }) {
     )
 }
 
-
-export default ProductMediaSlide;

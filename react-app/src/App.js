@@ -15,7 +15,7 @@ import { useDispatch } from 'react-redux';
 
 
 function App() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(userSessionFunction());

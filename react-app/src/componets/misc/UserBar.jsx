@@ -1,6 +1,6 @@
 import { useState, useEffect, useSelec } from "react";
 import { useDispatch, useSelector } from 'react-redux'
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import { userSignOutFunction } from "../../store/user";
 
@@ -21,6 +21,7 @@ function UserBar() {
 }
 
 function Anonymus() {
+    const navigate = useNavigate();
     const [dropdown, setDropdown] = useState(false)
     return (
         <div id='Anonymus' onMouseEnter={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
@@ -29,8 +30,8 @@ function Anonymus() {
             {
                 dropdown && (
                     <div id='Anonymus-d1'>
-                        <NavLink to={'/signin'}>Sign In</NavLink>
-                        <span>New costumer? <NavLink to={'/signup'}>Start here.</NavLink></span>
+                        <span className="Anonymus-d1s1" onClick={() => navigate("/signin")}>Sign In</span>
+                        <span className="Anonymus-d1s1" onClick={() => navigate("/signup")}>Create Account</span>
                     </div>
                 )
             }
@@ -39,19 +40,21 @@ function Anonymus() {
 }
 
 function User({ currentUser }) {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [dropdown, setDropdown] = useState(false)
     const handleSignOut = async () => {
         const response =  await dispatch(userSignOutFunction());
     }
     return (
-        <div id='Anonymus' onMouseEnter={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
+        <div id='Anonymus' onMouseOver={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
             <span className="headerspantop">Hello, {currentUser.first_name}</span>
             <span className="headerspanbot">Accounts & Lists</span>
             {
                 dropdown && (
                     <div id='Anonymus-d1'>
-                        <span onClick={() => handleSignOut()}>Sign Out</span>
+                        <span className="Anonymus-d1s1" onClick={() => navigate("/account")}>Account</span>
+                        <span className="Anonymus-d1s1" onClick={() => handleSignOut()}>Sign Out</span>
                     </div>
                 )
             }

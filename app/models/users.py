@@ -22,6 +22,7 @@ class User(db.Model, UserMixin):
 
     orders = db.relationship("Order", back_populates="user")
     reviews = db.relationship("Review", back_populates="user") 
+    addresses = db.relationship("Address", back_populates="user")
 
     created_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
     updated_at = db.Column(db.DateTime(timezone=True), onupdate=func.now())

@@ -1,0 +1,75 @@
+#Account {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Account-d1 {
+    height: auto;
+    width: 1000px;
+    margin-top: 20px;
+}
+
+#Account-d1s1 {
+    font-size: x-large;
+    font-weight: 600;
+}
+
+#Account-d2 {
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 320px 320px 320px;
+    gap: 20px;
+}
+
+.AccountCards {
+    height: 120px;
+    width: 320px;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.AccountCards:hover {
+    background-color: lightgrey;
+}
+
+.AccountCards-d1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AccountCards-d1i1 {
+    height: 75px;
+    width: 75px;
+    padding: 15px;
+    border-radius: 90px;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.AccountCards-d2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AccountCards-d2s1 {
+    font-size: large;
+    font-weight: 600;
+}
+
+.AccountCards-d2s2 {
+    font-size:small;
+    color:gray;
+}

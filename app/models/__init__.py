@@ -8,3 +8,4 @@ from .products import Product
 from .reviews import Review
 from .sellers import Seller
 from .users import User
+from .addresses_model import Address
